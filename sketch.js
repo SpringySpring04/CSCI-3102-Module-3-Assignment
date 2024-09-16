@@ -95,6 +95,11 @@ var A = []
 var colours = [];
 var running = false;
 
+function windowResized() {
+    cnv = createCanvas(windowWidth, windowHeight * 0.8);
+    cnv.position(0, (windowHeight * 0.2));
+}
+
 function setup() {
     // Create p5 Canvas
     let details = navigator.userAgent;
