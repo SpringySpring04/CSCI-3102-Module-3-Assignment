@@ -137,6 +137,7 @@ function setup() {
 
 function draw() {
     background(isMobileDevice ? "#004400" : 0);
+    noStroke();
     for (let i = 0; i < A.length; i++) {
         fill(colours[i]);
         draw_line(A, i);
