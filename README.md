@@ -19,6 +19,7 @@ averageCase(flip?: boolean = false); // Generates a triangular array that ascend
 bestCase(); // Generates an array that is already sorted.
 worstCase(); // Generates an array that is inversely sorted.
 setSleepDelay(milliseconds: number); // Sets the amount of milliseconds that the visualizer will "sleep" for so that there is a sense of progression to the algorithm instead of it just instantly being sorted.
+slightlyShuffle(offset?: number = 5); // Randomly moves around elements in the array to roughen up the edges. 'offset' must be a positive integer > 0.
 ```
 
 # Results of Testing

@@ -75,6 +75,20 @@ function setSleepDelay(ms) {
     }
 }
 
+async function slightlyShuffle(offset = 5) {
+    if (offset != abs(floor(offset))) offset = abs(floor(offset))
+    if (offset == 0) offset = 1;
+    if (offset >= floor(arrayLength / 2)) offset = floor(arrayLength / 2);
+    for (let i = 0; i < arrayLength; i++) {
+        let index = floor(random(i - offset, i + offset));
+        // Perform wrapping around the array
+        if (index < 0) index = arrayLength + index;
+        if (index > arrayLength) index = index - arrayLength;
+        if (index == i) continue;
+        await swap(A, i, index);
+    }
+}
+
 // ========================================================================================
 const htmlElts = {
     /** @type {Element} */
