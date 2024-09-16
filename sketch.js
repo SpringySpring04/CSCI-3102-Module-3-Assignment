@@ -97,8 +97,18 @@ var running = false;
 
 function setup() {
     // Create p5 Canvas
-    cnv = createCanvas(960, 960 * (9/16));
-    cnv.position((windowWidth / 2) - (width / 2), (windowHeight / 2) - (height / 2));
+    let details = navigator.userAgent;
+    let regexp = /android|iphone|kindle|ipad/i;
+    let isMobileDevice = regexp.test(details);
+
+    if (isMobileDevice) {
+        cnv = createCanvas(windowWidth, windowHeight * 0.8);
+        cnv.position(0, (windowHeight * 0.2));
+    } else { 
+        cnv = createCanvas(960, 960 * (9/16));
+        cnv.position((windowWidth / 2) - (width / 2), (windowHeight / 2) - (height / 2));
+    }
+
     for (let i = 0; i < 20; i++) {
         console.log("PLEASE TURN DOWN YOUR VOLUME! THE VISUALIZER IS VERY LOUD!!!!");
     }
