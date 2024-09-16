@@ -95,6 +95,8 @@ var A = []
 var colours = [];
 var running = false;
 
+var isMobileDevice = false;
+
 function windowResized() {
     cnv = createCanvas(windowWidth, windowHeight * 0.8);
     cnv.position(0, (windowHeight * 0.2));
@@ -104,7 +106,7 @@ function setup() {
     // Create p5 Canvas
     let details = navigator.userAgent;
     let regexp = /android|iphone|kindle|ipad/i;
-    let isMobileDevice = regexp.test(details);
+    isMobileDevice = regexp.test(details);
 
     if (isMobileDevice) {
         cnv = createCanvas(windowWidth, windowHeight * 0.8);
