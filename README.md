@@ -4,7 +4,7 @@
 By default, the project is set for an array of 300 elements, a sleep delay of 1 millisecond, with the RNG seeded with seed=50 for consistent measurements in the algorithm's efficiency.
 
 # Directions to view the visualization
-Click [here](about:blank) to open the visualization in the GitHub Pages link.
+Click [here](https://springyspring04.github.io/CSCI-3102-Module-3-Assignment/) to open the visualization in the GitHub Pages link.
 
 To shuffle the array, click the "Shuffle" button.
 Change the quicksort variation with the "first", "random", and "median" dropdown. Click "Start Sorting" to sort the array. PLEASE DO NOT SPAM THESE BUTTONS OR PRESS ONE WHILE A SHUFFLING OR SORTING PROCESS IS RUNNING.
